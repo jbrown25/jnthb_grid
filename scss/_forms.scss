@@ -26,6 +26,18 @@
 		height: $textarea-height;
 	}
 
+	input[type="checkbox"],
+	input[type="radio"] {
+		cursor: pointer;
+	}
+
+	input[type="checkbox"] + label,
+	input[type="radio"] + label {
+		left: 15px;
+		cursor: pointer;
+	}
+
+
 	label {
 		display: inline-block;
 		position: relative;

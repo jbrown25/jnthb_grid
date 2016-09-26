@@ -184,24 +184,31 @@
 	position: absolute;
 	padding-left: 0;
 	list-style-type: none;
-	overflow: hidden;
-	height: 0;
 	background: $light-gray;
+	display: none;
+}
+
+.__navbar-dropdown > li {
+	
+}
+
+.dropdown-open > .__navbar-dropdown > li {
+	
 }
 
 @media(max-width: $tablet-breakpoint){
 	.__navbar-dropdown {
+		position: relative;
 		padding-left: 25px;
 	}
 }
 
-.dropdown-open .__navbar-dropdown {
-	height: auto;
-	overflow: visble;
+.dropdown-open > .__navbar-dropdown {
+	display: inline-block;
 }
 
 @media(max-width: $tablet-breakpoint){
-	.dropdown-open .__navbar-dropdown {
+	.dropdown-open > .__navbar-dropdown {
 		width: 100%;
 	}
 }

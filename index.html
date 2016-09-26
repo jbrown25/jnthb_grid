@@ -95,18 +95,32 @@
 				<a href="#" class="__navbar-sitename">Responsive Grid</a>
 			</div>
 			<ul class="__navbar __navbar-fade pull-right">
-				<li><a href="#">Item 1</a></li>
-				<li><a href="#">Item 2</a></li>
-				<li><a href="#">Item 3</a></li>
-				<li><a href="#">Item 4</a></li>
 				<li>
-					<a href="#" class="__dropdown-button">Dropdown</a>
+					<a href="#" class="__dropdown-button">Dropdown 1</a>
 					<ul class="__navbar-dropdown">
 						<li><a href="#">Item 1</a></li>
-						<li><a href="#">Item 1</a></li>
-						<li><a href="#">Item 1 goes longer and longer</a></li>
+						<li><a href="#">Item 2</a></li>
+						<li>
+							<a href="#" class="__dropdown-button">Dropdown child</a>
+							<ul class="__navbar-dropdown">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</li>
 					</ul>
 				</li>
+				<li><a href="#">Item 1</a></li>
+				<li><a href="#">Item 2</a></li>
+				<li>
+					<a href="#" class="__dropdown-button">Dropdown 2</a>
+					<ul class="__navbar-dropdown">
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+						<li><a href="#">Item 3 goes longer and longer</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Item 4</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -323,9 +337,27 @@
 								<option>Item 3</option>
 							</select>
 						</div>
-						<div class="__checkbox-container">
+						<div class="__form-control-container">
 							<input type="checkbox" id="checkbox">
-							<label for="checkbox">Checkbox</label>
+							<label for="checkbox">Basic Checkbox</label>
+						</div>
+						<div class="__form-control-container">
+							<input type="radio" name="rad" id="rad1">
+							<label for="rad1">Basic Radio</label> 
+						</div>
+						<div class="__form-control-container">
+							<input type="radio" name="rad" id="rad2">
+							<label for="rad2">Basic Radio</label> 
+						</div>
+						<div class="__form-control-container">
+							<input type="radio" name="rad" id="rad3">
+							<label for="rad3">Basic Radio</label> 
+						</div>
+
+						<h5>Special Inputs</h5>
+						<div class="__checkbox-container">
+							<input type="checkbox" id="checkbox1">
+							<label for="checkbox1">Checkbox</label>
 						</div>
 						<div class="__radio-container">
 							<input type="radio" name="radio" id="radio1">
@@ -372,6 +404,10 @@
 			});
 
 			$('.__dropdown-button').click(function(){
+				var parent = $(this).closest('.__navbar > li');
+
+				$('.__navbar > li').not(parent).removeClass('dropdown-open');
+
 				$(this).closest('li').toggleClass('dropdown-open');
 			});
 			
