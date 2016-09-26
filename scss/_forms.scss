@@ -1,0 +1,120 @@
+//forms
+
+.__form-control-container {
+	@include form-control-container-base;
+}
+
+.__form-control-container {
+	input[type="text"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="password"],
+	select {
+		@include input-base;
+	}
+
+	input:focus,
+	select:focus,
+	textarea:focus {
+		outline: none;
+		border: 1px solid $primary-color;
+	}
+
+	textarea {
+		width: 100%;
+		height: $textarea-height;
+	}
+
+	label {
+		display: inline-block;
+		position: relative;
+		margin-bottom: 5px;
+	}
+}
+
+.__checkbox-container {
+	@include form-control-container-base;
+	overflow: hidden;
+}
+
+.__checkbox-container {
+	input[type="checkbox"] {
+	  display: none;
+	}
+
+	label {
+		cursor: pointer;
+		position: relative;
+		display: inline-block;
+		height: $form-control-height;
+		width: 100%;
+		line-height: $form-control-height;
+		left: $checkbox-offset;
+	}
+
+	input[type="checkbox"] + label::before {
+		content: "";
+		position: absolute;
+		left: -$checkbox-offset;
+		top: $checkbox-padding / 2;
+		height: $checkbox-size;
+		width: $checkbox-size;
+		border: 1px solid $text-color;
+
+	}
+
+	input[type="checkbox"]:checked + label::after {
+		content: "\2713";
+		font-size: $checkbox-font-size;
+		color: $primary-color;
+		position: absolute;
+		height: $form-control-height;
+		line-height: $form-control-height;
+		left: $check-offset;
+	}
+}
+
+.__radio-container {
+	@include form-control-container-base;
+	overflow: hidden;
+}
+
+.__radio-container {
+	input[type="radio"]{
+		display: none;
+	}
+
+	label {
+		cursor: pointer;
+		position: relative;
+		display: inline-block;
+		height: $form-control-height;
+		width: 100%;
+		line-height: $form-control-height;
+		left: $radio-input-offset;
+	}
+
+	input[type="radio"] + label::before {
+		content: "";
+		position: absolute;
+		left: -$radio-input-offset;
+		top: $checkbox-padding / 2;
+		height: $radio-size;
+		width: $radio-size;
+		border: 1px solid $text-color;
+		border-radius: 50%;
+	}
+
+	input[type="radio"]:checked + label::after {
+		content: "";
+		background: $primary-color;
+		position: absolute;
+		height: 16px;
+		width: 16px;;
+		line-height: $form-control-height;
+		top: 8px;
+		left: -48px;
+		border-radius: 50%;
+	}
+}

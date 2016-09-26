@@ -1,0 +1,83 @@
+//Colors
+$text-color: #2B2B2B;
+$light-text-color: #fff;
+$primary-color: #45D0FF;
+$secondary-color: #2CAFDB;
+$light-gray: #E3E3E3;
+$background-color: #fff;
+
+//Breakpoints
+$desktop-breakpoint: 1100px;
+$tablet-breakpoint: 750px;
+$phone-breakpoint: 550px;
+
+//resolutions
+$desktop-width: 1070px;
+$tablet-width: 725px;
+$phone-width: 100%;
+
+//Header sizes
+$lg-mast-height: 600px;
+$md-mast-height: 400px;
+$sm-mast-height: 300px;
+
+//Column Margins and padding
+$margin-bottom-default: 10px;
+$grid-padding: 5px;
+
+//Typography Margins
+$heading-margin-top: 5px;
+$heading-margin-bottom: 10px;
+
+$p-margin-top: 12px;
+$p-margin-bottom: 5px;
+
+//font-sizes
+$h1-font-size: 4em;
+$h2-font-size: 3em;
+$h3-font-size: 2.5em;
+$h4-font-size: 2em;
+$h5-font-size: 1.75em;
+$h6-font-size: 1.5em;
+
+$p-font-size: 1.25em;
+
+//buttons
+$button-padding-side: 18px;
+$button-padding-top: 8px;
+$button-border-radius: 3px;
+$button-margin-bottom: 5px;
+
+//Navbar
+$navbar-height: 55px;
+$navbar-item-padding: 15px;
+$navbar-item-margin: 5px;
+
+$burger-line-height: 2px;
+$burger-top: 18px;
+$burger-sides: 13px;
+
+
+$burger-corner: max($burger-top, $burger-sides) * 1.05;
+$burger-x-width: round(( $navbar-height - 2 * $burger-corner ) * 1.4142); 
+
+//tables
+$table-padding: 5px;
+
+//forms
+$form-control-height: 32px;
+$textarea-height: 125px;
+$checkbox-offset: 50px;
+$checkbox-padding: 12px;
+$checkbox-size: $form-control-height - $checkbox-padding;
+$check-offset: -$checkbox-offset + 3px;
+$checkbox-font-size: 1.5em;
+
+$radio-input-offset: 50px;
+$radio-padding: 14px;
+$radio-size: $form-control-height - $radio-padding;
+$radio-offset: -$radio-input-offset;
+
+//Z-indices
+$masthead-z: 1;
+$navbar-z: 10;

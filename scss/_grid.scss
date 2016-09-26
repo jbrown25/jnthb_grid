@@ -1,0 +1,229 @@
+//containers
+.__container {
+	@include container-base;
+	width: $desktop-width;
+}
+
+.__full-container {
+	@include container-base;
+	width: 100%;
+}
+
+.__container::before,
+.__row::before {
+	content: " ";
+	display: table;
+}
+
+.__container::after,
+.__row::after {
+	content: "";
+	display: table;
+	clear: both;
+	box-sizing: border-box;
+}
+
+
+@media (max-width: $desktop-breakpoint){
+	.__container {
+		width: $tablet-width;
+	}
+}
+
+@media (max-width: $tablet-breakpoint){
+	.__container {
+		width: $phone-width;
+	}	
+}
+
+@media(max-width: $phone-breakpoint){
+	.__container {
+		width: 100%;
+	}
+}
+
+//rows
+.__row {
+	box-sizing: border-box;
+	display: block;
+	margin-left: -1 * $grid-padding;
+	margin-right: -1 * $grid-padding;
+}
+
+.__lg-row {
+	@extend .__row;
+}
+
+.__md-row {
+	@extend .__row;
+}
+
+.__sm-row {
+	@extend .__row;
+}
+
+//columns
+.__column {
+	display: block;
+	float: left;
+	position: relative;
+	box-sizing: border-box;
+	padding-left: $grid-padding;
+	padding-right: $grid-padding;
+}
+
+.__col-1 {
+	@extend .__column;
+	width: 1 / 12 * 100%;
+}
+
+.__col-2 {
+	@extend .__column;
+	width: 2 / 12 * 100%;
+}
+
+.__col-3 {
+	@extend .__column;
+	width: 3 / 12 * 100%;
+}
+
+.__col-4 {
+	@extend .__column;
+	width: 4 / 12 * 100%;
+}
+
+.__col-5 {
+	@extend .__column;
+	width: 5 / 12 * 100%;
+}
+
+.__col-6 {
+	@extend .__column;
+	width: 6 / 12 * 100%;
+}
+
+.__col-7 {
+	@extend .__column;
+	width: 7 / 12 * 100%;
+}
+
+.__col-8 {
+	@extend .__column;
+	width: 8 / 12 * 100%;
+}
+
+.__col-9 {
+	@extend .__column;
+	width: 9 / 12 * 100%;
+}
+
+.__col-10 {
+	@extend .__column;
+	width: 10 / 12 * 100%;
+}
+
+.__col-11 {
+	@extend .__column;
+	width: 11 / 12 * 100%;
+}
+
+.__col-12 {
+	@extend .__column;
+	width: 12 / 12 * 100%;
+}
+
+@media (max-width: $desktop-breakpoint){
+	.__lg-row > .__column {
+		width: 100%;
+	}
+}
+
+@media (max-width: $tablet-breakpoint) {
+	.__md-row > .__column {
+		width: 100%;
+	}
+}
+
+@media(max-width: $phone_breakpoint) {
+	.__sm-row > .__column {
+		width: 100%;
+	}
+}
+
+//offsets
+.__offset {
+	/** Empty **/
+}
+
+.__offset-1 {
+	@extend .__offset;
+	margin-left: 1/12 * 100%;
+}
+
+.__offset-2 {
+	@extend .__offset;
+	margin-left: 2/12 * 100%;
+}
+
+.__offset-3 {
+	@extend .__offset;
+	margin-left: 3/12 * 100%;
+}
+
+.__offset-4 {
+	@extend .__offset;
+	margin-left: 4/12 * 100%;
+}
+
+.__offset-5 {
+	@extend .__offset;
+	margin-left: 5/12 * 100%;
+}
+
+.__offset-6 {
+	@extend .__offset;
+	margin-left: 6/12 * 100%;
+}
+
+.__offset-7 {
+	@extend .__offset;
+	margin-left: 7/12 * 100%;
+}
+
+.__offset-8 {
+	@extend .__offset;
+	margin-left: 8/12 * 100%;
+}
+
+.__offset-9 {
+	@extend .__offset;
+	margin-left: 9/12 * 100%;
+}
+
+.__offset-10 {
+	@extend .__offset;
+	margin-left: 10/12 * 100%;
+}
+
+.__offset-11 {
+	@extend .__offset;
+	margin-left: 11/12 * 100%;
+}
+
+@media (max-width: $desktop-breakpoint){
+	.__lg-row > .__offset {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: $tablet-breakpoint) {
+	.__md-row > .__offset {
+		margin-left: 0;
+	}
+}
+
+@media(max-width: $phone_breakpoint) {
+	.__sm-row > .__offset {
+		margin-left: 0;
+	}
+}

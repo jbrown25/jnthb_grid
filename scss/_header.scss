@@ -1,0 +1,30 @@
+.__masthead {
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: $margin-bottom-default;
+	z-index: $navbar-z;
+}
+
+.__sm-masthead {
+	@extend .__masthead;
+	height: $sm-mast-height;
+}
+
+.__md-masthead {
+	@extend .__masthead;
+	height: $md-mast-height;
+}
+
+.__lg-masthead {
+	@extend .__masthead;
+	height: $lg-mast-height;
+}
+
+.__full-masthead {
+	@extend .__masthead;
+	height: 100%;
+}
+

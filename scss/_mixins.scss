@@ -1,0 +1,30 @@
+@mixin transition($element, $time, $easing){
+  -webkit-transition: $element $time $easing;
+  transition: $element $time $easing;
+}
+
+@mixin container-base {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  padding-left: $grid-padding;
+  padding-right: $grid-padding;
+}
+
+
+//forms
+@mixin input-base {
+  width: 100%;
+  height: $form-control-height;
+  line-height: $form-control-height;
+}
+
+@mixin form-control-container-base {
+  width: 100%;
+  position: relative;
+  margin-bottom: $margin-bottom-default;
+}
+
+//gradients
+
+//shadows

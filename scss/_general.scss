@@ -1,0 +1,12 @@
+html {
+	font-size: $p-font-size;
+}
+
+body {
+	background: $background-color;
+	color: $text-color;
+}
+
+* {
+	box-sizing: border-box;
+}

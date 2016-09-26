@@ -1,0 +1,382 @@
+<html>
+<head lang="eng">
+	<meta charset="utf-8">
+	<title>Grid</title>
+	<link rel="stylesheet" href="css/jnthb.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<style>
+
+		body {
+			font-family: 'Open Sans Condensed', sans-serif;
+		}
+
+		.__full-masthead {
+			background: url(img/background.jpeg);
+			background-size: cover;
+			background-attachment: fixed;
+			z-index: 1;
+		}
+
+		.__full-masthead::before {
+			content:"";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: #000;
+			opacity: 0.25;
+			z-index: -1;
+		}
+
+		.__full-masthead h1,
+		.__full-masthead h3 {
+			color: #fff;
+			text-shadow: 3px 3px 1px #333;
+		}
+
+		.__full-masthead h3 {
+			font-style: italic;
+		}
+
+
+		.example-grid div[class^="__col"],
+		.example-offsets div[class^="__col"],
+		.example-full div[class^="__col"] {
+			background: #F2F2F2;
+			border-radius: 5px;
+			box-shadow: inset 3px 3px 1px #E8E8E8;
+			text-align: center;
+			margin-bottom: 5px;
+			-webkit-transition: all .15s ease;
+			transition: all .15s ease;
+		}
+
+		.example-grid  p,
+		.example-offsets p,
+		.example-nesting p,
+		.example-full p {
+			margin: 0;
+			padding: 0;
+			height: 35px;
+			line-height: 35px;
+		}
+
+		.example-nesting div[class^="__col"]{
+			background: #F2F2F2;
+			border-radius: 5px;
+			box-shadow: inset 3px 3px 1px #E8E8E8;
+			text-align: center;
+			-webkit-transition: all .15s ease;
+			transition: all .15s ease;			
+		}
+
+		.example-nesting .__lg-row > .__col-6:nth-child(2){
+			background: transparent;
+		}
+
+		@media(max-width: 1100px) {
+			.example-nesting div[class^="__col"]{
+				margin-bottom: 5px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav class="__navbar-container">
+		<div class="__container">
+			<div class="__navbar-header">
+				<button class="__navbar-burger pull-right">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</button>
+				<a href="#" class="__navbar-sitename">Responsive Grid</a>
+			</div>
+			<ul class="__navbar __navbar-fade pull-right">
+				<li><a href="#">Item 1</a></li>
+				<li><a href="#">Item 2</a></li>
+				<li><a href="#">Item 3</a></li>
+				<li><a href="#">Item 4</a></li>
+				<li>
+					<a href="#" class="__dropdown-button">Dropdown</a>
+					<ul class="__navbar-dropdown">
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 1 goes longer and longer</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<header class="__full-masthead flex-center">
+		<div class="masthead-content text-center">
+			<h1>jntheb_grid</h1>
+			<h3>A Responsive Grid Framework</h3>
+		</div>
+	</header>
+	<section class="grid">
+		<div class="__container">
+			<div class="__lg-row">
+				<div class="__col-12 text-center">
+					<h2>Grid</h2>
+				</div>
+			</div>
+		</div>
+		<div class="__container example-grid">
+			<div class="__lg-row">
+				<div class="__col-4"><p>Large Column 4</p></div>
+				<div class="__col-8"><p>Large Column 8</p></div>
+			</div>
+			<div class="__md-row">
+				<div class="__col-8"><p>Medium Column 8</p></div>
+				<div class="__col-4"><p>Medium Column 4</p></div>
+			</div>
+			<div class="__sm-row">
+				<div class="__col-4"><p>Small Column 4</p></div>
+				<div class="__col-8"><p>Small Column 8</p></div>
+			</div>
+		</div>
+	</section>
+	<section class="offsets">
+		<div class="__container">
+			<div class="__lg-row">
+				<div class="__col-12 text-center">
+					<h2>Offsets</h2>
+				</div>
+			</div>
+		</div>
+		<div class="__container example-offsets">
+			<div class="__lg-row">
+				<div class="__col-4 __offset-2"><p>Large Column 4, Offset 2</p></div>
+			</div>
+			<div class="__md-row">
+				<div class="__col-4 __offset-4"><p>Medium Column 4, Offset 4</p></div>
+			</div>
+			<div class="__sm-row">
+				<div class="__col-4 __offset-6"><p>Small Column 4, Offset 6</p></div>
+			</div>
+		</div>
+	</section>
+	<section class="nesting">
+		<div class="__container">
+			<div class="__lg-row">
+				<div class="__col-12 text-center">
+					<h2>Nesting<h2>
+				</div>
+			</div>
+		</div>
+		<div class="__container example-nesting">
+			<div class="__lg-row">
+				<div class="__col-6"><p>Large Column 6</p></div>
+				<div class="__col-6">
+					<div class="__sm-row">
+						<div class="__col-6"><p>Small Column 6</p></div>
+						<div class="__col-6"><p>Small Column 6</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="full-width">
+		<div class="__container">
+			<div class="__lg-row">
+				<div class="__col-12 text-center">
+					<h2>Full Width</h2>
+				</div>
+			</div>
+		</div>
+		<div class="__full-container example-full">
+			<div class="__lg-row">
+				<div class="__col-4"><p>Large Column 4</p></div>
+				<div class="__col-8"><p>Large Column 8</p></div>
+			</div>
+			<div class="__md-row">
+				<div class="__col-8"><p>Medium Column 8</p></div>
+				<div class="__col-4"><p>Medium Column 4</p></div>
+			</div>
+			<div class="__sm-row">
+				<div class="__col-4"><p>Small Column 4</p></div>
+				<div class="__col-8"><p>Small Column 8</p></div>
+			</div>			
+		</div>
+	</section>
+	<section class="typography">
+		<div class="__container">
+			<div class="__lg-row">
+				<div class="__col-12 text-center">
+					<h2>Typography</h2>
+				</div>
+			</div>
+		</div>
+		<div class="__container">
+			<div class="__md-row">
+				<div class="__col-6">
+					<h3>Paragraphs</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus erat nunc, aliquet sed placerat sed, eleifend eu purus. Integer ullamcorper ultricies ex, a egestas tortor pulvinar vitae. Nunc ultrices urna a purus vulputate, at egestas massa lacinia. Sed bibendum tristique ornare.</p>
+					<p>Mauris in placerat lacus. Phasellus mattis facilisis augue, nec tincidunt diam tempor vitae. In varius pellentesque leo quis consequat. Phasellus volutpat ac leo id faucibus.</p>
+					<p>Nullam sollicitudin libero at mauris gravida dictum. Maecenas at venenatis purus. Nullam vitae est vitae ligula viverra lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+				</div>
+				<div class="__col-6">
+					<h3>Lists</h3>
+					<ul>
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Sublist
+							<ul>
+								<li>Subitem 1</li>
+								<li>Subitem 2</li>
+							</ul>
+						</li>
+					</ul>
+					<ol>
+						<li>Item</li>
+						<li>Item</li>
+						<li>
+							Item
+							<ol>
+								<li>Item</li>
+								<li>Item</li>
+							</ol>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="__md-row">
+				<div class="__col-6">
+					<h3>Buttons</h3>
+					<p>One basic style of button.  Really just a starting point for styling buttons.  I like to make my own buttons.</p>
+					<a href="#" class="button">Button 1</a>
+					<a href="#" class="button">Button 2</a>
+					<a href="#" class="button">Button 3</a>
+				</div>
+				<div class="__col-6">
+					<h3></h3>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="tables">
+		<div class="__container">
+			<div class="__lg-row">
+				<div class="__col-12">
+					<h3>Tables</h3>
+					<table class="striped">
+						<thead>
+							<tr>
+								<th>Head 1</th>
+								<th>Head 2</th>
+								<th>Head 3</th>
+							<tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Item</td>
+								<td>Item</td>
+								<td>Item</td>
+							</tr>
+							<tr>
+								<td>Item</td>
+								<td>Item</td>
+								<td>Item</td>
+							</tr>
+							<tr>
+								<td>Item</td>
+								<td>Item</td>
+								<td>Item</td>
+							</tr>
+							<tr>
+								<td>Item</td>
+								<td>Item</td>
+								<td>Item</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="forms">
+		<div class="__container">
+			<div class="__lg-row">
+				<div class="__col-12">
+					<h3>Forms</h3>
+					<form>
+						<div class="__form-control-container">
+							<label for="inputText">Text</label>
+							<input type="text" id="inputText">
+						</div>
+						<div class="__form-control-container">
+							<label for="inputNumber">Number</label>
+							<input type="number" id="inputNumber">
+						</div>
+						<div class="__form-control-container">
+							<label for="textArea">Textarea</label>
+							<textarea id="textArea"></textarea>
+						</div>
+						<div class="__form-control-container">
+							<label for="inputSelect">Select</label>
+							<select id="inputSelect">
+								<option>Item 1</option>
+								<option>Item 2</option>
+								<option>Item 3</option>
+							</select>
+						</div>
+						<div class="__checkbox-container">
+							<input type="checkbox" id="checkbox">
+							<label for="checkbox">Checkbox</label>
+						</div>
+						<div class="__radio-container">
+							<input type="radio" name="radio" id="radio1">
+							<label for="radio1">Radio</label>
+						</div>
+						<div class="__radio-container">
+							<input type="radio" name="radio" id="radio2">
+							<label for="radio2">Radio</label>
+						</div>
+						<div class="__radio-container">
+							<input type="radio" name="radio" id="radio3">
+							<label for="radio3">Radio</label>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="images">
+		<div class="__container">
+			<div class="__lg-row">
+				<div class="__col-12">
+					<h3>Images</h3>
+					<p>These are responsive images</p>
+				</div>
+			</div>
+		</div>
+		<div class="__container">
+			<div class="__sm-row">
+				<div class="__col-4"><img class="img-responsive" src="img/img1.jpeg" alt="" /></div>
+				<div class="__col-4"><img class="img-responsive" src="img/img2.jpeg" alt="" /></div>
+				<div class="__col-4"><img class="img-responsive" src="img/img3.jpg" alt="" /></div>
+			</div>
+		</div>
+	</section>
+	<script src="js/vendor/jquery.js"></script>
+	<script>
+	(function($){
+		'use strict';
+		$(function(){
+			$('.__navbar-burger').click(function(){
+				$(this).closest('.__navbar-container').toggleClass('open');
+			});
+
+			$('.__dropdown-button').click(function(){
+				$(this).closest('li').toggleClass('dropdown-open');
+			});
+			
+		});
+	})(jQuery);
+	</script>
+</body>
+</html>
