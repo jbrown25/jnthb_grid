@@ -29,21 +29,22 @@
 }
 
 .__navbar {
-	display: inline-block;;
+	display: inline-block;
 	box-sizing: border-box;
 	float: left;
 	max-width: 100%;
 	margin: 0;
 	list-style-type: none;
 	height: $navbar-height;
-	line-height: $navbar-height;	
+	line-height: $navbar-height;
+	white-space: nowrap;	
 }
 
 @media(max-width: $tablet-breakpoint){
 	.__navbar {
-		height: 0;
 		width: 100%;
 		padding: 0;
+		display: none;
 		position: absolute;
 		top: $navbar-height;
 		left: 0;
@@ -59,7 +60,7 @@
 //Open nav
 @media(max-width: $tablet-breakpoint){
 	.__navbar-container.open .__navbar {
-		height: auto;
+		display: inline-block;
 		opacity: 1;
 	}
 }
@@ -188,12 +189,8 @@
 	display: none;
 }
 
-.__navbar-dropdown > li {
-	
-}
-
-.dropdown-open > .__navbar-dropdown > li {
-	
+li.dropdown-open {
+	position: relative;
 }
 
 @media(max-width: $tablet-breakpoint){
@@ -205,11 +202,28 @@
 
 .dropdown-open > .__navbar-dropdown {
 	display: inline-block;
+	top: 100%;
+	left: 0;
+}
+
+.__navbar-dropdown .dropdown-open > .__navbar-dropdown {
+	top: 0;
+	left: 100%;
+}
+
+@media(max-width: $tablet-breakpoint){
+	.__navbar-dropdown .dropdown-open > .__navbar-dropdown {
+		top: 0;
+		left: 0;
+	}
 }
 
 @media(max-width: $tablet-breakpoint){
 	.dropdown-open > .__navbar-dropdown {
 		width: 100%;
+		left: 0;
+		display: block;
+		float: none;
 	}
 }
 
