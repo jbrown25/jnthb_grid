@@ -1,0 +1,23 @@
+{
+  "name": "jnthb_grid",
+  "version": "1.0.0",
+  "description": "A simple responsive grid",
+  "main": "y",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "responsive",
+    "scss",
+    "grid"
+  ],
+  "author": "Justin A Brown",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
