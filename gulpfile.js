@@ -7,6 +7,9 @@ gulp.task('default', ['watch']);
 gulp.task('sass', function(){
 	return gulp.src('scss/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
+	.pipe(autoprefixer({
+		browsers: 'last 20 versions'
+	}))
     .pipe(gulp.dest('css'));
 });
 

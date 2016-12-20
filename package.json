@@ -2,7 +2,7 @@
   "name": "jnthb_grid",
   "version": "1.0.0",
   "description": "A simple responsive grid",
-  "main": "y",
+  "main": "index.js",
   "scripts": {
     "test": "none"
   },
