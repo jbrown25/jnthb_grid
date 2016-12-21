@@ -136,6 +136,17 @@
 			<h3>A Responsive Grid Framework</h3>
 		</div>
 	</header>
+	<section class="introduction">
+		<div class="__container">
+			<div class="__lg-row">
+				<div class="__col-12">
+					<p>
+						jnthb_grid is a lightweight, responsive CSS grid.  Documentation is available <a href="https://github.com/jbrown25/jnthb_grid" target="_blank">here.</a>  You can use it without attribution, but I would recommend using a more established CSS framework like <a href="http://getbootstrap.com/">Bootstrap</a> or <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> since they are well tested across thousands of projects.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="grid">
 		<div class="__container">
 			<div class="__lg-row">
@@ -422,6 +433,13 @@
 				$('.__navbar > li').not(parent).removeClass('dropdown-open');
 
 				$(this).closest('li').toggleClass('dropdown-open');
+			});
+
+			//links that go nowhere won't go to the top of the page
+			$('a').click(function(e){
+				if($(this).attr('href') === '#'){
+					e.preventDefault();
+				}
 			});
 			
 		});
