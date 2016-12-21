@@ -1,6 +1,7 @@
 <html>
 <head lang="eng">
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>jnthb_grid, a Responsive Grid Framework</title>
 	<link rel="stylesheet" href="css/jnthb.css" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
@@ -11,14 +12,14 @@
 			font-family: 'Open Sans Condensed', sans-serif;
 		}
 
-		.__full-masthead {
+		.__lg-masthead {
 			background: url(img/background.jpeg);
 			background-size: cover;
 			background-attachment: fixed;
 			z-index: 1;
 		}
 
-		.__full-masthead::before {
+		.__lg-masthead::before {
 			content:"";
 			position: absolute;
 			left: 0;
@@ -30,13 +31,13 @@
 			z-index: -1;
 		}
 
-		.__full-masthead h1,
-		.__full-masthead h3 {
+		.__lg-masthead h1,
+		.__lg-masthead h3 {
 			color: #fff;
 			text-shadow: 3px 3px 1px #333;
 		}
 
-		.__full-masthead h3 {
+		.__lg-masthead h3 {
 			font-style: italic;
 		}
 
@@ -129,7 +130,7 @@
 			</ul>
 		</div>
 	</nav>
-	<header class="__full-masthead flex-center">
+	<header class="__lg-masthead flex-center">
 		<div class="masthead-content text-center">
 			<h1>jnthb_grid</h1>
 			<h3>A Responsive Grid Framework</h3>
